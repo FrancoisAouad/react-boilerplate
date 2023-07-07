@@ -1,0 +1,29 @@
+import { useState } from 'react';
+import { Button } from 'primereact/button';
+import { Sidebar } from 'primereact/sidebar';
+import 'primereact/resources/themes/saga-blue/theme.css';
+import 'primereact/resources/primereact.min.css';
+
+export const MyComponent = () => {
+    const [visible, setVisible] = useState(false);
+
+    return (
+        <div>
+            <Button
+                label="Open Sidebar"
+                onClick={() => setVisible(true)}
+                className="p-mr-2"
+            />
+
+            <Sidebar visible={visible} onHide={() => setVisible(false)}>
+                <h2>Menu</h2>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </Sidebar>
+        </div>
+    );
+}
+
