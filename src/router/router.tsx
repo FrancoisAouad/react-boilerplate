@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from '../pages/home/home';
-import { MyComponent } from '../components/sidebar';
+import { HomePage } from '../pages/home/home';
+import { MyComponent } from '../components/molecules/sidebar/sidebar';
 
-const AppRouter = () => {
+const AppRouter = (ob: object) => {
   return (
     <Router>
       <Routes>
         <Route path="/home" Component={HomePage} />
-        <Route path='/my-component' Component={MyComponent} />
+        <Route path='/component' Component={MyComponent} />
       </Routes>
     </Router>
   );

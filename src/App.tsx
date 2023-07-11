@@ -1,7 +1,7 @@
 import React from 'react';
 import AppRouter from './router/router';
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
       <AppRouter />
@@ -9,4 +9,3 @@ function App() {
   );
 }
 
-export default App;
